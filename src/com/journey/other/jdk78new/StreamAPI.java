@@ -10,6 +10,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Stream API极大简化了集合框架的处理（但它的处理的范围不仅仅限于集合框架的处理）
@@ -99,7 +100,7 @@ public class StreamAPI {
 
         //从文本文件中逐行读取数据这样典型的I/O操作也很适合用Stream API来处理
         final Path path = new File(".gitignore").toPath();
-        try (java.util.stream.Stream<String> lines = Files.lines(path, StandardCharsets.UTF_8)) {
+        try (Stream<String> lines = Files.lines(path, StandardCharsets.UTF_8)) {
             lines.onClose(() -> System.out.println("Done!")).forEach(System.out::println);
         }
 
