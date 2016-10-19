@@ -48,10 +48,11 @@ public class MethodReferrance {
     public static void main(String[] args) {
         final Car car = Car.create(Car::new);
         final List<Car> cars = Arrays.asList(car);
-        cars.forEach(Car::collide);
-        cars.forEach(Car::repair);
+        cars.forEach(Car::collide); // car -> Car.collide(car)
+        cars.forEach(Car::repair); // car -> car.repair()
         final Car police = Car.create(Car::new);
-        cars.forEach(police::follow);
+        cars.forEach(police::follow); // car -> police.follow(car)
+
     }
 
 }

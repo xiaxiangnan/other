@@ -38,7 +38,7 @@ public class Lambda {
          */
         Arrays.asList(1, 3, 2).sort((e1, e2) -> e1.compareTo(e2));
         Arrays.asList(1, 3, 2).sort((Integer e1, Integer e2) -> {
-            int result = e1.compareTo(e2);
+            @SuppressWarnings("UnnecessaryLocalVariable") int result = e1.compareTo(e2);
             return result;
         });
 
