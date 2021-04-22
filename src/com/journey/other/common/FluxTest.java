@@ -1,4 +1,4 @@
-package com.journey.other.reactor;
+package com.journey.other.common;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
